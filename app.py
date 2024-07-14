@@ -1,4 +1,4 @@
-# made by sanskar bhat at home with ❤️‍🔥
+# made by sanskar bhai at home with ❤️‍🔥
 
 import streamlit as st
 import os
@@ -38,7 +38,7 @@ prompt = ChatPromptTemplate.from_template(
 def vector_embedding():
     if "vectors" not in st.session_state:
         st.session_state.embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
-        st.session_state.loader = PyPDFDirectoryLoader(r"D:\sankhu codes and stuff\IIT guwahati ds ai\langChain_chat\tcs-annual-report-2022-2023.pdf")  # Data Ingestion
+        st.session_state.loader = PyPDFDirectoryLoader(r"\us_census")  # Data Ingestion
         st.session_state.docs = st.session_state.loader.load()  # Document Loading
 
         st.write(f"Number of documents loaded: {len(st.session_state.docs)}")
